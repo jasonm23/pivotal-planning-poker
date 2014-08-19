@@ -33,17 +33,6 @@
 
   <% else %>
 
-    <div id="sub-menu" class="row">
-      <ul>
-        <li id="filter-all" class="selected">
-          <%= t('all').upcase %>
-        </li>
-        <li id="filter-unestimated">
-          <%= t('unestimated').upcase %>
-        </li>
-      </ul>
-    </div>
-
     <div id="content" class="col-md-12">
       <%= yield %>
     </div>
