@@ -1,0 +1,12 @@
+%li.user-vote(data-vote="#{story_id}-#{user}")
+  %span(class="#{card_class(vote, reveal)}")
+    .vote-value
+      - if vote
+        = vote
+      - else
+        - if vote.nil?
+          %span.fa.fa-ban
+        - else
+          ?
+    .voter
+      = nickname user

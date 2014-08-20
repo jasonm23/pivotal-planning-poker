@@ -1,32 +1,32 @@
 #project-info.widget
-  h2.titles
+  %h2.titles
     = t('projects.info')
-  ul
-    li
+  %ul
+    %li
       .row
         .col-md-4.story-labels
           = t('projects.id')
         .col-md-8
           = project.id
-    li
+    %li
       .row
         .col-md-4.story-labels
           = t('projects.name')
         .col-md-8
           = project.name
-    li
+    %li
       .row
         .col-md-4.story-labels
           = t('projects.labels')
         .col-md-8
           = comma_separated project.labels
-    li
+    %li
       .row
         .col-md-4.story-labels
           = t('projects.scheme')
         .col-md-8
           = project.velocity_scheme
-    li
+    %li
       .row
         .col-md-4.story-labels
           = t('projects.scale')

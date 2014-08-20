@@ -1,5 +1,5 @@
 #stories-list.stories.col-md-8
-  h2.titles
+  %h2.titles
     = t('story').pluralize
   #stories
     = render 'dashboard/stories/list', project: @projects.first unless @projects.blank?

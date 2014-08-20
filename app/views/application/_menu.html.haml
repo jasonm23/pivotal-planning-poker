@@ -1,0 +1,23 @@
+.col-md-12
+  .dropdown.project-dropdown
+    %button#menu-compact.btn.dropdown-toggle{"data-toggle" => "dropdown", :type => "button"}
+      = projects.first.name
+      %span.caret
+    %ul#menu-compact-list.dropdown-menu{"aria-labelledby" => "menu-compact-list", :role => "menu"}
+      - projects.each do |project|
+        %li{:role => "presentation"}
+          = link_to(project.name, project_path(project.id), remote: true, role: 'menuitem')
+%ul#menu.clearfix
+  - projects.first(5).each_with_index do |project, index|
+    %li{:class => "projects-list#{' active' if index.zero?}", :id => "project-#{project.id}"}
+      = link_to(project.name, project_path(project.id), remote: true)
+  - if projects.size > 5
+    %li#more-projects
+      .btn-group.more-projects.project-dropdown
+        %span.dropdown-toggle{"data-toggle" => "dropdown"}
+          = t('projects.more')
+          %span.caret
+        %ul.dropdown-menu
+          - projects.drop(5).each do |project|
+            %li.projects-list{:id => "project-#{project.id}"}
+              = link_to(project.name, project_path(project.id), remote: true)

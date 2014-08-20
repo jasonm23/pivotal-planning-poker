@@ -1,6 +1,6 @@
-.cards id="cards-#{story.id}"
+.cards(id="cards-#{story.id}")
   = render 'dashboard/stories/votes', story_id: story.id, reveal: false
-.btn-votes id="vote-#{story.id}"
+.btn-votes(id="vote-#{story.id}")
   - project.point_scale.split(',').each do |point|
     = link_to point, vote_path(story.id, point, encoded_user), class: 'btn btn-default', remote: true
   = link_to t('reset'), reset_path(story.id, encoded_user), class: 'btn btn-warning action-vote', remote: true

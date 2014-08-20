@@ -2,7 +2,7 @@
   = form_tag update_path, id: "form-#{story.id}", class: 'clearfix', remote: true do
     .col-md-12
       = link_to detail_path(story.id, 'collapse', encoded_user), id: "collapse-#{story.id}", remote: true do
-        span.fa.fa-play.fa-rotate-90.collapse
+        %span.fa.fa-play.fa-rotate-90.collapse
       .form-group.project-name
         = text_area_tag 'name', story.name, name: 'story[name]', class: 'form-control', rows: 2, disabled: state_accepted?(story)
         = hidden_field_tag 'story_id', story.id, name: 'story_id'

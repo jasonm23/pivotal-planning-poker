@@ -1,0 +1,5 @@
+#flash-container.flash-top-right
+  - flash.each do |name, msg|
+    %div{:class => "flash flash-#{name}", "data-dismiss" => "alert"}
+      .flash-message
+        = msg

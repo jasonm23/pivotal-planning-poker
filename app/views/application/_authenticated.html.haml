@@ -1,0 +1,25 @@
+= render 'overlay'
+#wrapper
+  #header.clearfix
+    .row
+      %h1.col-md-10
+        %span.fa-stack.logo
+          %i.fa.fa-circle-o.fa-stack-2x
+          %i.fa.fa-heart.fa-stack-1x
+        = t('planning')
+        %span= t('poker')
+      #header-links.text-right.col-md-2
+        = link_to logout_path, method: :delete, class: 'white header-links' do
+          %i.fa.fa-sign-out
+          = t('signout')
+    = render 'menu', projects: @projects unless @projects.blank?
+  - if @projects.blank?
+    #content
+      .text-center.default-state
+        %span.fa.fa-rocket
+        %h2
+          = t('dashboard.empty.title')
+          %small= t('dashboard.empty.subtitle')
+  - else
+    #content.col-md-12
+      = yield
