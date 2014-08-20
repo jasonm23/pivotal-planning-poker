@@ -1,4 +1,4 @@
-.story-detail[style="display:none"]
+.story-detail(style="display:none")
   = form_tag update_path, id: "form-#{story.id}", class: 'clearfix', remote: true do
     .col-md-12
       = link_to detail_path(story.id, 'collapse', encoded_user), id: "collapse-#{story.id}", remote: true do
@@ -14,9 +14,9 @@
         .form-group
           = text_area_tag 'description', story.description, name: 'story[description]', class: 'form-control', rows: 10, disabled: state_accepted?(story)
     - unless unestimateable?(story)
-      .col-md-12 id="votes-#{story.id}"
-    = render 'dashboard/stories/cards', project: project, story: story, reveal: false
-    = hidden_field_tag 'estimate', nil, name: 'story[estimate]'
-  .col-md-12.story-actions
-    = submit_tag t('save'), class: 'btn btn-success'
-    = link_to t('cancel'), detail_path(story.id, 'collapse', encoded_user), remote: true, class: 'btn btn-danger'
+      .col-md-12(id="votes-#{story.id}")
+        = render 'dashboard/stories/cards', project: project, story: story, reveal: false
+      = hidden_field_tag 'estimate', nil, name: 'story[estimate]'
+      .col-md-12.story-actions
+        = submit_tag t('save'), class: 'btn btn-success'
+        = link_to t('cancel'), detail_path(story.id, 'collapse', encoded_user), remote: true, class: 'btn btn-danger'
