@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.3'
 gem 'thin'
 gem 'faye'
+gem 'slim'
 
 # Assets
 gem 'jquery-rails'

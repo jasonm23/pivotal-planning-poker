@@ -1,0 +1,42 @@
+ul.story-info
+  li
+    .row
+      .col-md-6.story-labels
+        = t('stories.id').upcase
+      .col-md-6.text-right
+        = story.id
+  li
+    .row
+      .col-md-6.story-labels
+        = t('stories.type').upcase
+      .col-md-6.text-right
+        |  <span class="
+        = icon(story)
+        |  story-icon">
+        = story.story_type.capitalize
+  li
+    .row
+      .col-md-6.story-labels
+        = t('stories.points').upcase
+      |  <div id="estimate-
+      = story.id
+      | " class="col-md-6 text-right"> 
+      = render 'dashboard/stories/estimate', story: story
+  li
+    .row
+      .col-md-6.story-labels
+        = t('stories.state').upcase
+      .col-md-6.text-right
+        = story.current_state.capitalize
+  li
+    .row
+      .col-md-6.story-labels
+        = t('requester').upcase
+      .col-md-6.text-right
+        = story.requested_by
+  li
+    .row
+      .col-md-6.story-labels
+        = t('owner').upcase
+      .col-md-6.text-right
+        = story.owned_by

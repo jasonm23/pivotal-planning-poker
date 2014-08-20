@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    meta[charset="utf-8"]
+    meta[name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"]
+    title
+      | Pivotal Tracker: Planning Poker
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = javascript_include_tag publisher_client_path
+    = favicon_link_tag
+    = csrf_meta_tags
+  body[id=layout_class]
+    = render 'notification'
+    = render layout_class
+    javascript:
+      window.environment = "#{publisher_environment}";
+      window.publisher   = "#{publisher_domain}";
+      window.pubtoken    = "#{publisher_token}";

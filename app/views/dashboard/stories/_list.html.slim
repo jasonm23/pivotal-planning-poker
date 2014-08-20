@@ -1,0 +1,14 @@
+- project.stories.all({current_state: "unstarted", story_type: "feature"}).each do |story|
+  .story.clearfix id="story-#{story.id}" class=" story-#{story.current_state} story-#{story.story_type} story-#{estimation_class(story)}"
+    .story-overview.clearfix
+      .pull-left.story-icons
+        = link_to detail_path(story.id, 'expand', encoded_user), id: "expand-#{story.id}", remote: true do
+          span.fa.fa-play.story-icon.expand
+        span class="#{icon(story)} story-icon"
+        span.fa.story-icon
+          = raw estimation(story)
+      .pull-left.story-description
+        = story.name
+        span class="#{state(story)}"
+          = story.current_state
+    = render 'dashboard/stories/story', project: project, story: story

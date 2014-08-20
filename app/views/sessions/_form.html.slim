@@ -1,0 +1,6 @@
+= form_tag login_path, as: :session do
+  .form-group
+    = text_field_tag :username, nil, class: 'form-control', placeholder: 'Email / Username'
+  .form-group
+    = password_field_tag :password, nil, class: 'form-control', placeholder: 'Password'
+  = submit_tag t('signin').upcase, class: 'btn btn-success'
