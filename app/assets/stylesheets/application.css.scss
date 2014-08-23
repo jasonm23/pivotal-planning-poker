@@ -13,21 +13,23 @@
  *= require backtop
  *= require_tree .
  */
- 
+
 /* Twitter Bootstrap */
 @import 'bootstrap';
 
 /* Custom Fonts */
 @import url(//fonts.googleapis.com/css?family=Rokkitt:700);
 
-.green  { color: #7DC266 !important; }
-.orange { color: #FF7E4D !important; }
-.red    { color: #C72543 !important; }
-.white  { color: #FFFFFF !important; }
+@import 'poker_colors';
+
+.green  { color: $green !important; }
+.orange { color: $orange !important; }
+.red    { color: $red !important; }
+.white  { color: $white !important; }
 
 /* Overlay */
 #overlay {
-  background: #7DC266;
+  background: $green;
   position: fixed;
   z-index: 99999;
   width: 100%;
@@ -204,7 +206,7 @@
   > div {
     background-position: 25px center;
     background-repeat: no-repeat;
-    color: #FFFFFF;
+    color: $white;
     margin: 0 0 6px;
 
     -webkit-border-radius: 5px;

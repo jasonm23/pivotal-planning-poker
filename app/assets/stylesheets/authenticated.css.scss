@@ -1,9 +1,67 @@
+@import 'poker_colors';
+
+$authenticated_background: #F7F6F6;
+$dark_text: #333;
+
+$menu_background: #EEE;
+$menu_text: #777;
+$menu_text_shadow: $darker_green;
+$menu_active_background:#EEE;
+$menu_active_text:#666;
+$menu_inactive_text:#FFF;
+$menu_active_text_shadow:#FEFEFE;
+$more_projects_caret: #666;
+
+$project_dropdown_background: #EEE;
+$project_dropdown_text: #666;
+
+$sub_menu_background: #EEE;
+$sub_menu_shadow: #DDD;
+$sub_menu_border_bottom: #F9F9F9;
+$sub_menu_text:  #999;
+$sub_menu_selected_background_color: #FFF;
+$sub_menu_selected_text: #256188;
+
+$stories_border: #E2E2E2;
+$story_background_color: #F3F3D1;
+$story_border_bottom: #DBDBB0;
+$story_border_top: $white;
+$story_unstarted_background: #E4EFF7;
+$story_unstarted_border_bottom: #DDD;
+$story_rejected_background_color: #F3D1D1;
+$story_rejected_border_bottom: #DBB0B0;
+
+$icon_bar_background_color: #000;
+
+$expand_collapse_text: #BEBEBE;
+$expand_collapse_text_shadow: #666;
+
+$titles_background: #333;
+$titles_text: $white;
+
+$story_detail_background: #E9E7DD;
+$story_detail_box_shadow: #CCC;
+$story_detail_updated: #FFDE76;
+
+$story_detail_info_background: #F6F6F6;
+$story_detail_info_border: #CCC;
+
+$story_detail_info_item_border_top: #FFF;
+$story_detail_info_item_border_bottom: #CCC;
+$story_detail_info_item_text: #505050;
+
+$default_state_fa: #EEE;
+$default_state_heading_text: #999;
+$default_state_heading_small_text: #CCC;
+
+$widget_border: #E2E2E2;
+
 #authenticated {
-  background-color: #F7F6F6;
-  color: #333;
+  background-color: $authenticated_background;
+  color: $dark_text;
 
   #header {
-    background: #7DC266;
+    background: $green;
     padding: 5px 20px 0;
 
     h1 {
@@ -11,7 +69,7 @@
       margin: 0;
       padding: 0;
       font-size: 18px;
-      color: #FFF;
+      color: $white;
 
       span {
         &.logo {
@@ -31,8 +89,8 @@
       margin: 0 auto;
 
       #menu-compact {
-        background: #EEE;
-        color: #777;
+        background: $menu_background;
+        color: $menu_text;
         display: none;
         font-size: 12px;
         font-weight: bold;
@@ -73,7 +131,7 @@
       float: left;
       font-weight: bold;
       font-size: 12px;
-      text-shadow: 1px 1px 1px #51A335;
+      text-shadow: 1px 1px 1px $menu_text_shadow;
 
       &.active {
         -moz-border-radius-topleft: 4px;
@@ -82,26 +140,26 @@
         -moz-border-radius-topright: 4px;
         -webkit-border-top-right-radius: 4px;
         border-top-right-radius: 4px;
-        background-color: #EEE;
-        color: #666;
-        text-shadow: 1px 1px 1px #FEFEFE;
+        background-color: $menu_active_background;
+        color: $menu_active_text;
+        text-shadow: 1px 1px 1px $menu_active_text_shadow;
 
-        a { color: #666; &:hover { text-decoration: none; }}
+        a { color: $more_projects_caret; &:hover { text-decoration: none; }}
 
         .more-projects {
           .dropdown-toggle, .caret {
-            color: #666;
+            color: $more_projects_caret;
           }
         }
       }
 
-      a { color: #FFF; }
+      a { color: $menu_inactive_text; }
 
       .more-projects {
         display: block;
 
         .dropdown-toggle, .caret {
-          color: #FFF;
+          color: $menu_inactive_text;
         }
 
         &.open {
@@ -116,11 +174,11 @@
 
   .project-dropdown li {
     &.active {
-      a { background: #EEE; }
+      a { background: $project_dropdown_background; }
     }
 
     a {
-      color: #666 !important;
+      color: $project_dropdown_text !important;
       text-shadow: none;
       font-size: 11px;
       padding: 10px 20px;
@@ -128,28 +186,28 @@
   }
 
   #sub-menu {
-    background: #EEE;
-    box-shadow: 1px 1px 5px #DDD;
-    border-bottom: 1px solid #F9F9F9;
+    background: $sub_menu_background;
+    box-shadow: 1px 1px 5px $sub_menu_shadow;
+    border-bottom: 1px solid $sub_menu_border_bottom;
     padding: 10px;
 
     li {
       float: left;
       margin: 0 5px;
       list-style: none;
-      color: #999;
+      color: $sub_menu_text;
       font-size: 11px;
       padding: 5px 10px;
       cursor: pointer;
 
       &.selected {
-        background-color: #FFF;
+        background-color: $sub_menu_selected_background_color;
         -webkit-border-radius: 4px;
         -moz-border-radius: 4px;
         -ms-border-radius: 4px;
         -o-border-radius: 4px;
         border-radius: 4px;
-        color: #256188;
+        color: $sub_menu_selected_text;
       }
     }
   }
@@ -161,14 +219,15 @@
     -o-border-radius: 7px 7px 0 0;
     border-radius: 7px 7px 0 0;
 
-    border: 1px solid #E2E2E2;
+    border: 1px solid $stories_border;
     padding: 0;
 
     .story {
       font-size: 12px;
-      background-color: #F3F3D1;
-      border-bottom: 1px solid #DBDBB0;
-      border-top: 1px solid #FFF;
+
+      background-color: $story_background_color;
+      border-bottom: 1px solid $story_border_bottom;
+      border-top: 1px solid $story_border_top;
 
       .story-overview {
         padding: 10px;
@@ -194,13 +253,13 @@
     }
 
     .story-unstarted, .story-unscheduled {
-      background-color: #E4EFF7;
-      border-bottom: 1px solid #DDD;
+      background-color: $story_unstarted_background;
+      border-bottom: 1px solid $story_unstarted_border_bottom;
     }
 
     .story-rejected {
-      background-color: #F3D1D1;
-      border-bottom: 1px solid #DBB0B0;
+      background-color: $story_rejected_background_color;
+      border-bottom: 1px solid $story_rejected_border_bottom;
     }
   }
 
@@ -208,14 +267,14 @@
     display: block;
     width: 10px;
     height: 2px;
-    background-color: #000;
+    background-color: $icon_bar_background_color;
     margin-bottom: 1px;
   }
 
   .expand, .collapse {
     font-size: .75em;
-    color: #BEBEBE;
-    text-shadow: 0px -1px #666;
+    color: $expand_collapse_text;
+    text-shadow: 0px -1px $expand_collapse_text_shadow;
     cursor: pointer;
   }
 
@@ -227,13 +286,13 @@
   }
 
   .titles {
-    background-color: #333;
+    background-color: $titles_background;
     -webkit-border-radius: 6px 6px 0 0;
     -moz-border-radius: 6px 6px 0 0;
     -ms-border-radius: 6px 6px 0 0;
     -o-border-radius: 6px 6px 0 0;
     border-radius: 6px 6px 0 0;
-    color: #FFF;
+    color: $titles_text;
     line-height: 27px;
     overflow: hidden;
     padding: 0 10px;
@@ -244,25 +303,73 @@
   }
 
   .story-detail {
-    background-color: #E9E7DD;
-    background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, rgba(255, 255, 255, 0.2)), color-stop(.25, rgba(0, 0, 0, 0)), color-stop(.5, rgba(0, 0, 0, 0)), color-stop(.5, rgba(255, 255, 255, 0.2)), color-stop(.75, rgba(255, 255, 255, 0.2)), color-stop(.75, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
-    background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
-    background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
-    background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
-    background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
-    background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
+    background-color: $story_detail_background;
+
+    background-image: -webkit-gradient(
+      linear, 0 0, 100% 100%,
+      color-stop(0.25, rgba(255, 255, 255, 0.2)),
+      color-stop(0.25, rgba(0, 0, 0, 0)),
+      color-stop(0.5, rgba(0, 0, 0, 0)),
+      color-stop(0.5, rgba(255, 255, 255, 0.2)),
+      color-stop(0.75, rgba(255, 255, 255, 0.2)),
+      color-stop(0.75, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
+    background-image: -webkit-linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.2) 25%,
+      rgba(0, 0, 0, 0) 25%,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0.2) 75%,
+      rgba(0, 0, 0, 0) 75%,
+      rgba(0, 0, 0, 0));
+    background-image: -moz-linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.2) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0.2) 75%,
+      transparent 75%,
+      transparent);
+    background-image: -ms-linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.2) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0.2) 75%,
+      transparent 75%,
+      transparent);
+    background-image: -o-linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.2) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0.2) 75%,
+      transparent 75%,
+      transparent);
+    background-image: linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.2) 25%,
+      rgba(0, 0, 0, 0) 25%,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0.2) 75%,
+      rgba(0, 0, 0, 0) 75%,
+      rgba(0, 0, 0, 0));
 
     -webkit-background-size: 5px 5px;
     -moz-background-size: 5px 5px;
     background-size: 5px 5px;
 
-    box-shadow: inset 0px 0px 8px #CCC;
+    box-shadow: inset 0px 0px 8px $story_detail_box_shadow;
 
     padding: 10px;
     position: relative;
 
     &.updated {
-      background-color: #FFDE76;
+      background-color: $story_detail_updated;
     }
 
     textarea {
@@ -275,17 +382,17 @@
 
     .story-info {
       list-style-type: none;
-      background-color: #F6F6F6;
-      border: 1px solid #CCC;
+      background-color: $story_detail_info_background;
+      border: 1px solid $story_detail_info_border;
       border-bottom: none;
       padding: 0;
 
       li {
-        border-top: 1px solid #FFF;
-        border-bottom: 1px solid #CCC;
+        border-top: 1px solid $story_detail_info_item_border_top;
+        border-bottom: 1px solid $story_detail_info_item_border_bottom;
         font-size: 11px;
         padding: 5px 10px;
-        color: #505050;
+        color: $story_detail_info_item_text;
       }
     }
   }
@@ -295,15 +402,15 @@
 
     .fa {
       font-size: 20em;
-      color: #EEE;
+      color: $default_state_fa;
     }
 
     h2 {
-      color: #999;
+      color: $default_state_heading_text;
 
       small {
         display: block;
-        color: #CCC;
+        color: $default_state_heading_small_text;
         margin: 5px 0;
       }
     }
@@ -318,7 +425,7 @@
     -o-border-radius: 7px 7px 0 0;
     border-radius: 7px 7px 0 0;
 
-    border: 1px solid #E2E2E2;
+    border: 1px solid $widget_border;
     padding: 0;
 
     ul {
@@ -429,7 +536,7 @@
       .dropdown {
         #menu-compact {
           display: block;
-        } 
+        }
       }
     }
 

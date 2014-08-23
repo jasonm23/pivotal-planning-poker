@@ -8,10 +8,16 @@
           %i.fa.fa-heart.fa-stack-1x
         = t('planning')
         %span= t('poker')
-      #header-links.text-right.col-md-2
-        = link_to logout_path, method: :delete, class: 'white header-links' do
-          %i.fa.fa-sign-out
-          = t('signout')
+      #header-links.text-right
+        %span.white.header-links
+          %i.fa.fa-user
+          %span &nbsp;
+          = current_user[:username]
+          %span &nbsp; | &nbsp;
+        %span.white.header-links
+          = link_to logout_path, method: :delete, class: 'white header-links' do
+            %i.fa.fa-sign-out
+            = t('signout')
     = render 'menu', projects: @projects unless @projects.blank?
   - if @projects.blank?
     #content
