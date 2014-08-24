@@ -1,112 +1,128 @@
-$green:                                                       #7DC266;
-$darker_green:                                                #51A335;
-$orange:                                                      #FF7E4D;
-$red:                                                         #C72543;
-$white:                                                       white;
+$green: #7DC266;
+$dark_green: darken($green, 25%);
+$darker_green: darken($green, 35%);
+$orange: #FF7E4D;
+$red: #C72543;
+$white: white;
 
-$overlay_ul_li_background_color:                              #FFF;
+$header_background: desaturate(lighten($green, 25%), 5%);
 
-$flash_border:                                                #030303;
-$flash_background_color:                                      #030303;
-$flash_message_a_label_a_hover_color:                         #CCC;
-$flash_message_a_label_color:                                 #FFF;
+$overlay_ul_li_background_color: #FFF;
+$overlay_background: $header_background;
 
-$flash_notice_flash_message_text_shadow:                      #087963;
-$flash_notice_border:                                         #409922;
-$flash_notice_background_color:                               #55A23B;
+$flash_border: #030303;
+$flash_background_color: #030303;
+$flash_message_a_label_a_hover_color: #CCC;
+$flash_message_a_label_color: #FFF;
 
-$flash_info_flash_message_text_shadow:                        #0F5C72;
-$flash_info_border:                                           #0F5C72;
-$flash_info_background_color:                                 #2F96B4;
+$flash_notice_flash_message_text_shadow: #087963;
+$flash_notice_border: #409922;
+$flash_notice_background_color: #55A23B;
 
-$flash_warning_flash_message_text_shadow:                     #BD740C;
-$flash_warning_border:                                        #BD740C;
-$flash_warning_background_color:                              #ffae00;
+$flash_info_flash_message_text_shadow: #0F5C72;
+$flash_info_border: #0F5C72;
+$flash_info_background_color: #2F96B4;
 
-$flash_alert_flash_message_text_shadow:                       #A90A2C;
-$flash_alert_border:                                          #A90A2C;
-$flash_alert_background_color:                                #ed1f24;
+$flash_warning_flash_message_text_shadow: #BD740C;
+$flash_warning_border: #BD740C;
+$flash_warning_background_color: #ffae00;
 
-$authenticated_cards_ul_li_card_card_revealed_border_color:   #4CAE4C;
-$authenticated_cards_ul_li_card_card_revealed_background:     #5CB85C;
+$flash_alert_flash_message_text_shadow: #A90A2C;
+$flash_alert_border: #A90A2C;
+$flash_alert_background_color: #ed1f24;
 
-$authenticated_cards_ul_li_card_card_hidden_border_color:     #46B8DA;
-$authenticated_cards_ul_li_card_card_hidden_background:       #5BC0DE;
+$authenticated_cards_ul_li_card_card_revealed_border_color: #4CAE4C;
+$authenticated_cards_ul_li_card_card_revealed_background: #5CB85C;
 
-$authenticated_cards_ul_li_card_card_blank_color:             #D3D3D3;
-$authenticated_cards_ul_li_card_card_blank_border:            #D3D3D3;
-$authenticated_cards_ul_li_card_card_blank_background_color:  #E9E9E9;
-$authenticated_cards_ul_li_card_color:                        #FFF;
+$authenticated_cards_ul_li_card_card_hidden_border_color: #46B8DA;
+$authenticated_cards_ul_li_card_card_hidden_background: #5BC0DE;
 
-$authenticated_cards_ul_li_card_border:                       #067596;
-$authenticated_cards_ul_li_card_background_color:             #2F96B4;
+$authenticated_cards_ul_li_card_card_blank_color: #D3D3D3;
+$authenticated_cards_ul_li_card_card_blank_border: #D3D3D3;
+$authenticated_cards_ul_li_card_card_blank_background_color: #E9E9E9;
+$authenticated_cards_ul_li_card_color: #FFF;
 
-$authenticated_cards_background:                              #DFDCD0;
-$authenticated_widget_ul_li_border_bottom:                    #DDD;
-$authenticated_widget_ul_li_background_color:                 #FFF;
+$authenticated_cards_ul_li_card_border: #067596;
+$authenticated_cards_ul_li_card_background_color: #2F96B4;
 
-$authenticated_widget_ul_li_color:                            #666;
+$authenticated_cards_background: #DFDCD0;
+$authenticated_widget_ul_li_border_bottom: #DDD;
+$authenticated_widget_ul_li_background_color: #FFF;
 
-$authenticated_background:                                    #F7F6F6;
-$authenticated_text:                                          #333;
+$authenticated_widget_ul_li_color: #666;
+$unauthenticated_header_text: $green;
+$unauthenticated_header_span_text: darken($green, 24%);
 
-$menu_background:                                             #EEE;
-$menu_text:                                                   #777;
+$authenticated_header_background_color: $header_background;
+$authenticated_header_text: $green;
+$authenticated_header_span_text: darken($green, 25%);
 
-$menu_text_shadow:                                            $darker_green;
-$menu_active_background:                                      #EEE;
-$menu_active_text:                                            #666;
-$menu_inactive_text:                                          #FFF;
-$menu_active_text_shadow:                                     #FEFEFE;
-$more_projects_caret:                                         #666;
+$authenticated_background: #F7F6F6;
+$authenticated_text: darken($green, 25%);
 
-$project_dropdown_background:                                 #EEE;
-$project_dropdown_text:                                       #666;
+$menu_background: #EEE;
+$menu_text: #333;
 
-$sub_menu_background:                                         #EEE;
-$sub_menu_shadow:                                             #DDD;
-$sub_menu_border_bottom:                                      #F9F9F9;
-$sub_menu_text:                                               #999;
-$sub_menu_selected_background_color:                          #FFF;
-$sub_menu_selected_text:                                      #256188;
+$menu_text_shadow: $darker_green;
+$menu_active_background: $dark_green;
+$menu_active_text: #FFF;
+$menu_inactive_text: #FFF;
+$more_projects_caret: #FFF;
 
-$stories_border:                                              #E2E2E2;
-$story_background_color:                                      #F3F3D1;
-$story_border_bottom:                                         #DBDBB0;
-$story_border_top:                                            $white;
-$story_unstarted_background:                                  #E4EFF7;
-$story_unstarted_border_bottom:                               #DDD;
-$story_rejected_background_color:                             #F3D1D1;
-$story_rejected_border_bottom:                                #DBB0B0;
+$project_dropdown_background: #EEE;
+$project_dropdown_text: #666;
 
-$icon_bar_background_color:                                   #000;
+$sub_menu_background: #EEE;
+$sub_menu_shadow: #DDD;
+$sub_menu_border_bottom: #F9F9F9;
+$sub_menu_text: #999;
+$sub_menu_selected_background_color: #FFF;
+$sub_menu_selected_text: #256188;
 
-$expand_collapse_text:                                        #BEBEBE;
-$expand_collapse_text_shadow:                                 #666;
+$stories_border: #E2E2E2;
+$story_background_color: #F3F3D1;
+$story_border_bottom: #DBDBB0;
+$story_border_top: $white;
+$story_unstarted_background: #E4EFF7;
+$story_unstarted_border_bottom: #DDD;
+$story_rejected_background_color: #F3D1D1;
+$story_rejected_border_bottom: #DBB0B0;
 
-$titles_background:                                           #333;
-$titles_text:                                                 $white;
+$icon_bar_background_color: #000;
 
-$story_detail_background:                                     #E9E7DD;
-$story_detail_box_shadow:                                     #CCC;
-$story_detail_updated:                                        #FFDE76;
+$expand_collapse_text: #BEBEBE;
+$expand_collapse_text_shadow: #666;
 
-$story_detail_info_background:                                #F6F6F6;
-$story_detail_info_border:                                    #CCC;
+$titles_background: #333;
+$titles_text: $white;
 
-$story_detail_info_item_border_top:                           #FFF;
-$story_detail_info_item_border_bottom:                        #CCC;
-$story_detail_info_item_text:                                 #505050;
+$story_detail_background: #E9E7DD;
+$story_detail_box_shadow: #CCC;
+$story_detail_updated: #FFDE76;
 
-$default_state_fa:                                            #EEE;
-$default_state_heading_text:                                  #999;
-$default_state_heading_small_text:                            #CCC;
+$story_detail_info_background: #F6F6F6;
+$story_detail_info_border: #CCC;
 
-$widget_border:                                               #E2E2E2;
+$story_detail_info_item_border_top: #FFF;
+$story_detail_info_item_border_bottom: #CCC;
+$story_detail_info_item_text: #505050;
 
-$unauthenticated_text:                                        #888;
-$unauthenticated_background:                                  $green;
-$unauthenticated_header_background:                           #FFF;
-$unauthenticated_header_span_text:                            #C72543;
-$unauthenticated_header_text:                                 $green;
-$unauthenticated_signin_box_background:                       #E9E9E9;
+$default_state_fa: #EEE;
+$default_state_heading_text: #999;
+$default_state_heading_small_text: #CCC;
+
+$widget_border: #E2E2E2;
+
+$unauthenticated_text: #888;
+$unauthenticated_background: $green;
+$unauthenticated_header_background: $header_background;
+$unauthenticated_header_text: $green;
+$unauthenticated_header_span_text: darken($green, 24%);
+$unauthenticated_signin_box_background: #E9E9E9;
+
+.green        { color: $green        !important; }
+.dark-green   { color: $dark-green   !important; }
+.darker-green { color: $darker-green !important; }
+.orange       { color: $orange       !important; }
+.red          { color: $red          !important; }
+.white        { color: $white        !important; }

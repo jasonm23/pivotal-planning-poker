@@ -18,18 +18,18 @@
 @import 'bootstrap';
 
 /* Custom Fonts */
-@import url(//fonts.googleapis.com/css?family=Rokkitt:700);
+@import url(//fonts.googleapis.com/css?family=Holtwood+One+SC);
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
 
 @import 'poker_colors';
 
-.green  { color: $green !important; }
-.orange { color: $orange !important; }
-.red    { color: $red !important; }
-.white  { color: $white !important; }
+body {
+  font-family: 'Open Sans';
+}
 
 /* Overlay */
 #overlay {
-  background: $green;
+  background: $overlay_background;
   position: fixed;
   z-index: 99999;
   width: 100%;

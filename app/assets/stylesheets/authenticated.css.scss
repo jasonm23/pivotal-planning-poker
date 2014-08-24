@@ -5,17 +5,19 @@
   color: $authenticated_text;
 
   #header {
-    background: $green;
+    background-color: $authenticated_header_background_color;
     padding: 5px 20px 0;
 
     h1 {
-      font-family: 'Rokkitt', serif;
+      font-family: 'Holtwood One SC', serif;
       margin: 0;
       padding: 10px;
       font-size: 28pt;
-      color: $white;
+      color: $authenticated_header_text;
+      // weight: normal;
 
       span {
+        color: $authenticated_header_span_text;
         &.logo {
           font-size: 14px;
         }
@@ -86,7 +88,6 @@
         border-top-right-radius: 4px;
         background-color: $menu_active_background;
         color: $menu_active_text;
-        text-shadow: 1px 1px 1px $menu_active_text_shadow;
 
         a { color: $more_projects_caret; &:hover { text-decoration: none; }}
 
@@ -168,6 +169,7 @@
 
     .story {
       font-size: 12px;
+      font-family: 'Open Sans';
 
       background-color: $story_background_color;
       border-bottom: 1px solid $story_border_bottom;
@@ -317,7 +319,8 @@
     }
 
     textarea {
-      font-size: 11px;
+      font-family: 'Open Sans';
+      font-size: 11pt;
     }
 
     .project-name {

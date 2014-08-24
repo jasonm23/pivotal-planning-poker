@@ -7,13 +7,13 @@
         = t('pivotal')
         %span= t('poker')
       #header-links.text-right
-        %span.white.header-links
+        %span.header-links
           %i.fa.fa-user
           %span &nbsp;
           = current_user[:username]
           %span &nbsp; | &nbsp;
-        %span.white.header-links
-          = link_to logout_path, method: :delete, class: 'white header-links' do
+        %span.header-links
+          = link_to logout_path, method: :delete, class: 'dark-green header-links' do
             %i.fa.fa-sign-out
             = t('signout')
     = render 'menu', projects: @projects unless @projects.blank?
