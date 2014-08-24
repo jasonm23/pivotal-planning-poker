@@ -47,7 +47,7 @@
     li {
       width: 10px;
       height: 10px;
-      background-color: #FFF;
+      background-color: $overlay_ul_li_background_color;
       box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
       margin: 0 4px;
       -webkit-animation: loading 2.5s infinite;
@@ -172,10 +172,10 @@
   -ms-word-wrap: break-word;
   word-wrap: break-word;
   a, label {
-    color: #FFF;
+    color: $flash_message_a_label_color;
   }
   a:hover {
-    color: #CCC;
+    color: $flash_message_a_label_a_hover_color;
     text-decoration: none;
   }
 }
@@ -225,8 +225,8 @@
 
 .flash {
   display: none;
-  background-color: #030303;
-  border: 1px solid #030303;
+  background-color: $flash_background_color;
+  border: 1px solid $flash_border;
   .close {
     margin-right: 5px !important;
   }
@@ -242,34 +242,34 @@
 }
 
 .flash-notice {
-  background-color: #55A23B;
-  border: 1px solid #409922;
+  background-color: $flash_notice_background_color;
+  border: 1px solid $flash_notice_border;
   .flash-message {
-    text-shadow: 1px 1px 0px #087963;
+    text-shadow: 1px 1px 0px $flash_notice_flash_message_text_shadow;
   }
 }
 
 .flash-alert {
-  background-color: #ed1f24;
-  border: 1px solid #A90A2C;
+  background-color: $flash_alert_background_color;
+  border: 1px solid $flash_alert_border;
   .flash-message {
-    text-shadow: 1px 1px 0px #A90A2C;
+    text-shadow: 1px 1px 0px $flash_alert_flash_message_text_shadow;
   }
 }
 
 .flash-info {
-  background-color: #2F96B4;
-  border: 1px solid #0F5C72;
+  background-color: $flash_info_background_color;
+  border: 1px solid $flash_info_border;
   .flash-message {
-    text-shadow: 1px 1px 0px #0F5C72;
+    text-shadow: 1px 1px 0px $flash_info_flash_message_text_shadow;
   }
 }
 
 .flash-warning {
-  background-color: #ffae00;
-  border: 1px solid #BD740C;
+  background-color: $flash_warning_background_color;
+  border: 1px solid $flash_warning_border;
   .flash-message {
-    text-shadow: 1px 1px 0px #BD740C;
+    text-shadow: 1px 1px 0px $flash_warning_flash_message_text_shadow;
   }
 }
 

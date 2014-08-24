@@ -1,18 +1,11 @@
 @import 'poker_colors';
 
-$text: #888;
-$background: $green;
-$header_background: #FFF;
-$header_span_text: #C72543;
-$header_text: $green;
-$signin_box_background: #E9E9E9;
-
 #unauthenticated {
-  background-color: $background;
-  color: $text;
+  background-color: $unauthenticated_background;
+  color: $unauthenticated_text;
 
   #header {
-    background: $header_background;
+    background: $unauthenticated_header_background;
     padding: 5px 20px;
 
     h1 {
@@ -23,7 +16,7 @@ $signin_box_background: #E9E9E9;
       color: $green;
 
       span {
-        color: $header_span_text;
+        color: $unauthenticated_header_span_text;
 
         &.logo {
           font-size: 20px;
@@ -33,7 +26,7 @@ $signin_box_background: #E9E9E9;
   }
 
   #signin-box {
-    background-color: $signin_box_background;
+    background-color: $unauthenticated_signin_box_background;
     padding: 25px 30px;
     margin-top: 10%;
 

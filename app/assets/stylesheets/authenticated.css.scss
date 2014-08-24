@@ -1,64 +1,8 @@
 @import 'poker_colors';
 
-$authenticated_background: #F7F6F6;
-$dark_text: #333;
-
-$menu_background: #EEE;
-$menu_text: #777;
-$menu_text_shadow: $darker_green;
-$menu_active_background:#EEE;
-$menu_active_text:#666;
-$menu_inactive_text:#FFF;
-$menu_active_text_shadow:#FEFEFE;
-$more_projects_caret: #666;
-
-$project_dropdown_background: #EEE;
-$project_dropdown_text: #666;
-
-$sub_menu_background: #EEE;
-$sub_menu_shadow: #DDD;
-$sub_menu_border_bottom: #F9F9F9;
-$sub_menu_text:  #999;
-$sub_menu_selected_background_color: #FFF;
-$sub_menu_selected_text: #256188;
-
-$stories_border: #E2E2E2;
-$story_background_color: #F3F3D1;
-$story_border_bottom: #DBDBB0;
-$story_border_top: $white;
-$story_unstarted_background: #E4EFF7;
-$story_unstarted_border_bottom: #DDD;
-$story_rejected_background_color: #F3D1D1;
-$story_rejected_border_bottom: #DBB0B0;
-
-$icon_bar_background_color: #000;
-
-$expand_collapse_text: #BEBEBE;
-$expand_collapse_text_shadow: #666;
-
-$titles_background: #333;
-$titles_text: $white;
-
-$story_detail_background: #E9E7DD;
-$story_detail_box_shadow: #CCC;
-$story_detail_updated: #FFDE76;
-
-$story_detail_info_background: #F6F6F6;
-$story_detail_info_border: #CCC;
-
-$story_detail_info_item_border_top: #FFF;
-$story_detail_info_item_border_bottom: #CCC;
-$story_detail_info_item_text: #505050;
-
-$default_state_fa: #EEE;
-$default_state_heading_text: #999;
-$default_state_heading_small_text: #CCC;
-
-$widget_border: #E2E2E2;
-
 #authenticated {
   background-color: $authenticated_background;
-  color: $dark_text;
+  color: $authenticated_text;
 
   #header {
     background: $green;
@@ -67,8 +11,8 @@ $widget_border: #E2E2E2;
     h1 {
       font-family: 'Rokkitt', serif;
       margin: 0;
-      padding: 0;
-      font-size: 18px;
+      padding: 10px;
+      font-size: 28pt;
       color: $white;
 
       span {
@@ -435,9 +379,9 @@ $widget_border: #E2E2E2;
       li {
         overflow: hidden;
         font-size: 11px;
-        color: #666;
-        background-color: #FFF;
-        border-bottom: 1px solid #DDD;
+        color: $authenticated_widget_ul_li_color;
+        background-color: $authenticated_widget_ul_li_background_color;
+        border-bottom: 1px solid $authenticated_widget_ul_li_border_bottom;
         list-style-type: none;
         padding: 10px;
       }
@@ -446,7 +390,7 @@ $widget_border: #E2E2E2;
 
   .cards {
     padding: 10px 5px;
-    background: #DFDCD0;
+    background: $authenticated_cards_background;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -463,14 +407,14 @@ $widget_border: #E2E2E2;
         margin: 5px;
 
         .card {
-          background-color: #2F96B4;
-          border: 5px solid #067596;
+          background-color: $authenticated_cards_ul_li_card_background_color;
+          border: 5px solid $authenticated_cards_ul_li_card_border;
           min-width: 90px;
           min-height: 100px;
           display: inline-block;
           zoom: 1;
           *display: inline;
-          color: #FFF;
+          color: $authenticated_cards_ul_li_card_color;
           text-align: center;
           padding: 10px;
           vertical-align: top;
@@ -479,22 +423,22 @@ $widget_border: #E2E2E2;
           border-radius: 10px;
 
           &.card-blank {
-            background-color: #E9E9E9;
-            border: 5px solid #D3D3D3;
-            color: #D3D3D3;
+            background-color: $authenticated_cards_ul_li_card_card_blank_background_color;
+            border: 5px solid $authenticated_cards_ul_li_card_card_blank_border;
+            color: $authenticated_cards_ul_li_card_card_blank_color;
           }
 
           &.card-hidden {
-            background: #5BC0DE;
-            border-color: #46B8DA;
+            background: $authenticated_cards_ul_li_card_card_hidden_background;
+            border-color: $authenticated_cards_ul_li_card_card_hidden_border_color;
           }
 
           &.card-revealed {
             cursor: pointer;
 
             &.card-selected, &:hover {
-              background: #5CB85C;
-              border-color: #4CAE4C;
+              background: $authenticated_cards_ul_li_card_card_revealed_background;
+              border-color: $authenticated_cards_ul_li_card_card_revealed_border_color;
             }
           }
 
