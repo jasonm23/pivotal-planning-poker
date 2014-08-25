@@ -1,73 +1,99 @@
-$green: #7DC266;
-$dark_green: darken($green, 25%);
-$darker_green: darken($green, 35%);
-$orange: #FF7E4D;
-$red: #C72543;
-$white: white;
+/// Base color palette
+
+$green:         #7DC266;
+$green2:        #4CAE4C;
+$green3:        #5CB85C;
+
+$dark_green:    darken($green, 25%);
+$darker_green:  darken($green, 35%);
+
+$orange:        #FF7E4D;
+$burnt_orange:  #BD740C;
+$golden:        #ffae00;
+
+$red:           #C72543;
+$dark_red:      #A90A2C;
+$bright_red:    #ed1f24;
+
+$lighter_blue:  #4BC0DE;
+$light_blue:    #46B8DA;
+$blue:          #2F96B4;
+$dark_blue:     #0F5C72;
+
+$white:         #FFFFFF;
+$lighter_grey:  #E9E9E9;
+$light_grey:    #D3D3D3;
+$mid_grey:      #666666;
+
+$black:         #000000;
+
+$darkness:      #030303;
+
+/// Semantic palette...
 
 $header_background: desaturate(lighten($green, 25%), 5%);
 
-$overlay_ul_li_background_color: #FFF;
+$overlay_ul_li_background_color: $white;
 $overlay_background: $header_background;
 
-$flash_border: #030303;
-$flash_background_color: #030303;
-$flash_message_a_label_a_hover_color: #CCC;
-$flash_message_a_label_color: #FFF;
+$flash_border: $darkness;
+$flash_background_color: $darkness;
+$flash_message_a_label_a_hover_color: $light_grey;
+$flash_message_a_label_color: $white;
 
-$flash_notice_flash_message_text_shadow: #087963;
-$flash_notice_border: #409922;
-$flash_notice_background_color: #55A23B;
+$flash_notice_flash_message_text_shadow: $darker_green;
+$flash_notice_border: $green2;
+$flash_notice_background_color: $green3;
 
-$flash_info_flash_message_text_shadow: #0F5C72;
-$flash_info_border: #0F5C72;
-$flash_info_background_color: #2F96B4;
+$flash_info_flash_message_text_shadow: $dark_blue;
+$flash_info_border: $dark_blue;
+$flash_info_background_color: $blue;
 
-$flash_warning_flash_message_text_shadow: #BD740C;
-$flash_warning_border: #BD740C;
-$flash_warning_background_color: #ffae00;
+$flash_warning_flash_message_text_shadow: $burnt_orange;
+$flash_warning_border: $burnt_orange;
+$flash_warning_background_color: $golden;
 
-$flash_alert_flash_message_text_shadow: #A90A2C;
-$flash_alert_border: #A90A2C;
-$flash_alert_background_color: #ed1f24;
+$flash_alert_flash_message_text_shadow: $dark_red;
+$flash_alert_border: $dark_red;
+$flash_alert_background_color: $bright_red;
 
-$authenticated_cards_ul_li_card_card_revealed_border_color: #4CAE4C;
-$authenticated_cards_ul_li_card_card_revealed_background: #5CB85C;
+$authenticated_cards_ul_li_card_card_revealed_border_color: $green2;
+$authenticated_cards_ul_li_card_card_revealed_background: $green3;
 
-$authenticated_cards_ul_li_card_card_hidden_border_color: #46B8DA;
-$authenticated_cards_ul_li_card_card_hidden_background: #5BC0DE;
+$authenticated_cards_ul_li_card_card_hidden_border_color: $lighter_blue;
+$authenticated_cards_ul_li_card_card_hidden_background: $light_blue;
 
-$authenticated_cards_ul_li_card_card_blank_color: #D3D3D3;
-$authenticated_cards_ul_li_card_card_blank_border: #D3D3D3;
-$authenticated_cards_ul_li_card_card_blank_background_color: #E9E9E9;
-$authenticated_cards_ul_li_card_color: #FFF;
+$authenticated_cards_ul_li_card_card_blank_color: $light_grey;
+$authenticated_cards_ul_li_card_card_blank_border: $light_grey;
+$authenticated_cards_ul_li_card_card_blank_background_color: $lighter_grey;
+$authenticated_cards_ul_li_card_color: $white;
 
-$authenticated_cards_ul_li_card_border: #067596;
-$authenticated_cards_ul_li_card_background_color: #2F96B4;
+$authenticated_cards_ul_li_card_border: $dark_blue;
+$authenticated_cards_ul_li_card_background_color: $blue;
+$authenticated_cards_background: $light_grey;
 
-$authenticated_cards_background: #DFDCD0;
-$authenticated_widget_ul_li_border_bottom: #DDD;
-$authenticated_widget_ul_li_background_color: #FFF;
+$authenticated_widget_ul_li_border_bottom: $light_grey;
+$authenticated_widget_ul_li_background_color: $white;
 
-$authenticated_widget_ul_li_color: #666;
+$authenticated_widget_ul_li_color: $mid_grey;
 $unauthenticated_header_text: $green;
-$unauthenticated_header_span_text: darken($green, 24%);
+$unauthenticated_header_span_text: $dark_green;
 
 $authenticated_header_background_color: $header_background;
 $authenticated_header_text: $green;
-$authenticated_header_span_text: darken($green, 25%);
+$authenticated_header_span_text: $dark_green;
 
-$authenticated_background: #F7F6F6;
-$authenticated_text: darken($green, 25%);
+$authenticated_background: $lighter_grey;
+$authenticated_text: $dark_green;
 
-$menu_background: #EEE;
-$menu_text: #333;
+$menu_background: $lighter_grey;
+$menu_text: $darkness;
 
 $menu_text_shadow: $darker_green;
 $menu_active_background: $dark_green;
-$menu_active_text: #FFF;
-$menu_inactive_text: #FFF;
-$more_projects_caret: #FFF;
+$menu_active_text: $white;
+$menu_inactive_text: $white;
+$more_projects_caret: $white;
 
 $project_dropdown_background: #EEE;
 $project_dropdown_text: #666;
@@ -76,8 +102,8 @@ $sub_menu_background: #EEE;
 $sub_menu_shadow: #DDD;
 $sub_menu_border_bottom: #F9F9F9;
 $sub_menu_text: #999;
-$sub_menu_selected_background_color: #FFF;
-$sub_menu_selected_text: #256188;
+$sub_menu_selected_background_color: $white;
+$sub_menu_selected_text: $dark_blue;
 
 $stories_border: #E2E2E2;
 $story_background_color: #F3F3D1;
@@ -103,7 +129,7 @@ $story_detail_updated: #FFDE76;
 $story_detail_info_background: #F6F6F6;
 $story_detail_info_border: #CCC;
 
-$story_detail_info_item_border_top: #FFF;
+$story_detail_info_item_border_top: $white;
 $story_detail_info_item_border_bottom: #CCC;
 $story_detail_info_item_text: #505050;
 
@@ -117,7 +143,7 @@ $unauthenticated_text: #888;
 $unauthenticated_background: $green;
 $unauthenticated_header_background: $header_background;
 $unauthenticated_header_text: $green;
-$unauthenticated_header_span_text: darken($green, 24%);
+$unauthenticated_header_span_text: $dark_green;
 $unauthenticated_signin_box_background: #E9E9E9;
 
 .green        { color: $green        !important; }
