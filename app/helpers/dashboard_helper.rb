@@ -8,7 +8,7 @@ module DashboardHelper
     when 'release' then 'fa fa-flag-checkered green'
     else
       story.story_type
-    end 
+    end
   end
 
   def bar_icons(size)
@@ -27,6 +27,8 @@ module DashboardHelper
   def estimation(story)
     if estimated?(story)
       show_estimation_icons?(story) ? bar_icons(story.estimate) : small_strong_text(story.estimate)
+    else
+      (story.estimate.to_i == 0) ? %Q{<span class="black fa fa-circle-o-notch"></span>} : ""
     end
   end
 

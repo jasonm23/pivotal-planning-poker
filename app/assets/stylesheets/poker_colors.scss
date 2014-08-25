@@ -114,7 +114,7 @@ $story_unstarted_border_bottom: #DDD;
 $story_rejected_background_color: #F3D1D1;
 $story_rejected_border_bottom: #DBB0B0;
 
-$icon_bar_background_color: #000;
+$icon_bar_background_color: $black;
 
 $expand_collapse_text: #BEBEBE;
 $expand_collapse_text_shadow: #666;
@@ -152,3 +152,4 @@ $unauthenticated_signin_box_background: #E9E9E9;
 .orange       { color: $orange       !important; }
 .red          { color: $red          !important; }
 .white        { color: $white        !important; }
+.black        { color: $black        !important; }
